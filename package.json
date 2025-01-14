@@ -1,17 +1,18 @@
 {
-  "name": "shadcn-ui-monorepo",
+  "name": "neulbom",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "web:dev": "turbo --filter web dev",
+    "admin:dev": "turbo --filter admin dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*",
-    "@workspace/typescript-config": "workspace:*",
-    "prettier": "^3.2.5",
+    "@packages/eslint-config": "workspace:*",
+    "@packages/typescript-config": "workspace:*",
     "turbo": "^2.3.0",
     "typescript": "5.5.4"
   },
