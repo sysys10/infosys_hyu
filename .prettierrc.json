@@ -5,19 +5,9 @@
   "jsxSingleQuote": true,
   "trailingComma": "none",
   "tabWidth": 2,
-  "printWidth": 80,
+  "printWidth": 180,
   "semi": false,
-  "importOrder": [
-    "^@apis/(.*)$",
-    "^@components/(.*)$",
-    "^@hooks/(.*)$",
-    "^@pages/(.*)$",
-    "^@styles/(.*)$",
-    "^@types/(.*)$",
-    "^@utils/(.*)$",
-    "^@packages/(.*)$",
-    "^[./]"
-  ],
+  "importOrder": ["^@apis$", "<THIRD_PARTY_MODULES>", "^@types$", "^@hooks$", "^@pages$", "^@styles$", "^@utils$", "^@packages/(.*)$", "^[./]"],
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true

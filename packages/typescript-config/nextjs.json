@@ -6,6 +6,7 @@
   "resolveJsonModule": true,
   "moduleDetection": "force",
   "compilerOptions": {
+    "isolatedModules": false,
     "plugins": [{ "name": "next" }],
     "module": "ESNext",
     "moduleResolution": "Bundler",
