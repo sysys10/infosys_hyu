@@ -2,15 +2,38 @@
 import type { Config } from 'tailwindcss'
 
 const config = {
-  content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}', '../../packages/ui/src/components/**/*.{ts,tsx}'],
+  content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}', '../../packages/ui/src/components/**/*.{ts,tsx}', 'src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      aspectRatio: {
+        '10/16': '10 / 16',
+        '16/10': '16 / 10'
+      },
+      boxShadow: {
+        'inset-b': 'inset 0 -0.5px 0 0 var(--border)',
+        'inset-bl': 'inset 1px -1px 0 0 var(--border)',
+        'inset-br': 'inset -1px -1px 0 0 var(--border)',
+        'inset-tl': 'inset 1px 1px 0 0 var(--border)',
+        'inset-tr': 'inset -1px 1px 0 0 var(--border)',
+        'inset-t': 'inset 0 1px 0 0 var(--border)',
+        'inset-r': 'inset -1px 0 0 0 var(--border)',
+        'inset-l': 'inset 1px 0 0 0 var(--border)',
+        'inset-all': 'inset 0 0 0 1px var(--border)'
+      },
       fontFamily: {
         cafe24: ['var(--font-cafe24)'],
         nanum: ['var(--font-nanum)']
       },
       colors: {
+        infosys: {
+          purple: '#082267',
+          blue: '#00529c',
+          green: '#008000',
+          yellow: '#f4a50f',
+          red: '#ed888a'
+        },
         btn: {
+          disabled: 'var(--button-disabled)',
           yellow: '#f4a50f',
           paleyellow: '#fff5c9',
           tenderyellow: '#fffc88',
@@ -20,6 +43,17 @@ const config = {
           bordergrey: '#d8d8d8',
           sky: '#46b5ff'
         },
+        text: {
+          DEFAULT: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          disabled: 'var(--text-disabled)'
+        },
+        background: {
+          DEFAULT: 'var(--background-primary)',
+          secondary: 'var(--background-secondary)',
+          tertiary: 'var(--background-tertiary)'
+        },
+        border: 'var(--border)',
         skyblue: '#46b5ff',
         paleblue: '#e7f4fc',
         borderblue: '#bce3f8',
@@ -30,39 +64,9 @@ const config = {
         btnred: '#ed888a',
         deactivate: '#909090',
         bordergrey: '#d8d8d8',
-        border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        }
+        foreground: 'hsl(var(--foreground))'
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -88,7 +92,7 @@ const config = {
         }
       },
       spacing: {
-        'navbar-height': '6.25rem'
+        'navbar-height': 'var(--navbar-height)'
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',

@@ -4,8 +4,27 @@
 
 @layer base {
   :root {
-    --navbar-height: 6.25rem;
-    --background: 0 0% 100%;
+    --infosys-blue: #0070f3;
+
+    --navbar-height: 4rem;
+
+    --background-primary: #ffffff;
+    --background-secondary: #f5f5f5;
+    --background-tertiary: #edeef0;
+
+    --text-primary: #000000;
+    --text-secondary: #0f0f0f;
+    --text-tertiary: #a0a0a0;
+
+    --border: #eeeeee;
+
+    --button-disabled: #eaeaea;
+    --text-disabled: #4f4f4f;
+
+    /* --primary: #000000;
+    --secondary: #0f0f0f;
+    --tertiary: #a0a0a0; */
+
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -13,7 +32,7 @@
     --popover-foreground: 240 10% 3.9%;
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
+    /* --secondary: 240 4.8% 95.9%; */
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
@@ -21,7 +40,6 @@
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
     --chart-1: 12 76% 61%;
@@ -32,4 +50,26 @@
     --radius: 0.5rem;
     --buttongreen: #5ebf86;
   }
+}
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+#modal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#modal-root > * {
+  pointer-events: auto;
 }
