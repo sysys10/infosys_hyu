@@ -3,12 +3,22 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@packages/ui/*": [
-        "../../packages/ui/src/*"
-      ]
+      "@/*": ["./src/*"],
+      "@packages/ui": ["../../packages/ui/src"],
+      "@packages/ui/*": ["../../packages/ui/src/*"],
+
+      "@components": ["./src/components"],
+      "@components/ui": ["./src/components/ui"],
+      "@components/common": ["./src/components/common"],
+      "@components/*": ["./src/components/*"],
+      "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"],
+      // "@assets/*": ["./src/assets/*"],
+      "@hooks": ["./src/hooks"],
+      "@utils": ["./src/utils"],
+      "@stores": ["./src/stores"],
+      "@types": ["./src/types"],
+      "@app": ["./src/app"]
     },
     "plugins": [
       {
@@ -24,7 +34,5 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -26,6 +26,12 @@ importers:
       '@packages/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@supabase/ssr':
+        specifier: ^0.5.2
+        version: 0.5.2(@supabase/supabase-js@2.47.15)
+      '@supabase/supabase-js':
+        specifier: ^2.47.13
+        version: 2.47.15
       lucide-react:
         specifier: 0.456.0
         version: 0.456.0(react@19.0.0)
@@ -41,6 +47,9 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
+      react-toastify:
+        specifier: ^11.0.3
+        version: 11.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@packages/eslint-config':
         specifier: workspace:^
